@@ -1,10 +1,14 @@
 package com.rubfitness.app.controller;
 
 import com.rubfitness.app.entity.Treino;
+import com.rubfitness.app.models.TreinoDTO;
 import com.rubfitness.app.service.TreinoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -23,6 +27,12 @@ public class TreinoController {
     @GetMapping("/{id}")
     public Optional<Treino> buscarTreino(@PathVariable Long id) {
         return treinoService.buscarTreinoPorId(id);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<TreinoDTO>> buscarTreino(
+            @RequestParam(value = "tipo" , required = false)String tipo) {
+        return ResponseEntity.ok(treinoService.listarTreinos(tipo));
     }
 
     @PostMapping

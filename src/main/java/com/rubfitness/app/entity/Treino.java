@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 
 @Entity
 @Data
@@ -30,4 +29,8 @@ public class Treino {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "exercicio_id")
     private Exercicio exercicio;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tipo_treino_id")
+    private TipoTreino tipoTreino;
 }
