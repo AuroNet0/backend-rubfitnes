@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tipos")
-@CrossOrigin(origins = "*")
 public class TipoTreinoController {
 
     @Autowired

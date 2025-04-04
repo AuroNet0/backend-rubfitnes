@@ -3,6 +3,8 @@ package com.rubfitness.app.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 public class TreinoDTO {
@@ -13,7 +15,7 @@ public class TreinoDTO {
     private int qtdSeriesValidas;
     private int cargaValida;
     private int percepcaoEsforco;
-    private String data;
+    private Date data;
     private String exercicioNome;
     private String tipoTreinoDescricao;
 }

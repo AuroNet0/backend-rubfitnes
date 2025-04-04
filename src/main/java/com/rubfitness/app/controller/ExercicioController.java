@@ -10,7 +10,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/exercicios")
-@CrossOrigin(origins = "*")
 public class ExercicioController {
 
     @Autowired

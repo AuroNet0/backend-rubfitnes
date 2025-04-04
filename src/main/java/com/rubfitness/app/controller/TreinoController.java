@@ -13,7 +13,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/treinos")
-@CrossOrigin(origins = "*")
 public class TreinoController {
 
     @Autowired

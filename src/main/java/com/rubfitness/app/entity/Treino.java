@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 
 @Entity
 @Data
@@ -24,7 +26,7 @@ public class Treino {
     private int qtdSeriesValidas;
     private int carga_valida;
     private int percepcaoEsforco;
-    private String data;
+    private Date data;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "exercicio_id")
